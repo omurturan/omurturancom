@@ -1,6 +1,6 @@
 baseURL = "https://omurturan.com"
-languageCode = "en"
-DefaultContentLanguage = "en"
+languageCode = "tr"
+DefaultContentLanguage = "tr"
 title = "Website of Ömür Turan"
 theme = "anatole"
 summarylength = 10
