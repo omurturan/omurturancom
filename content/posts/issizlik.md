@@ -1,7 +1,7 @@
 ---
 title: "İşsizlikten İşlere Vakit Bulamamak"
 date: 2017-10-26T00:30:02+01:00
-draft: true
+draft: false
 ---
 Yaklaşık 3 haftadır işsizim. Çok uzun bir kariyerim yok fakat hayatımda bu denli uzun boşluk sanırım en son üniversite hazırlık sınıfında olmuştu. İş değişikliklerim bile hep “acil ihtiyacımız var” dendiği için cuma bir işi bırakıp pazartesi diğer işe başlamak şeklinde geçti.
 Boş olmanın ne demek olduğunu hatırlamak, biraz ara vermek çok iyi geldi. Bu süreçte (sanırım aşırı boş vaktimin olmasından dolayı) daha önce hiç anlam veremediğim veya bana çok mantıksız gelen şeylere farklı gözle bakma şansım oldu. Hiç lafı uzatmadan bunlardan bahsetmek istiyorum.
