@@ -1,5 +1,5 @@
 ---
-title: "MULTIPLE GIT USERS IN ONE COMPUTER"
+title: "USING MULTIPLE GIT ACCOUNTS"
 date: 2021-04-13T20:30:36+02:00
 draft: false
 ---

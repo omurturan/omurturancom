@@ -19,11 +19,11 @@ pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
 
 [params]
-title = "I'm Ömür"
-author = "Veli Ömür Turan"
+title = "👨‍💻🎹☕️🌻🖖"
+author = ""
 #copyright = "2020-2021"
 description = """
-Software Engineer
+Veli Ömür Turan
 """
 profilePicture = "images/profile.jpg"
 keywords = ""
