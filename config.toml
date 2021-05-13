@@ -46,7 +46,7 @@ doNotLoadAnimations = true
 # CommentoURL = "https://commento.example.com/js/commento.js"
 # Read More links for truncated summaries
 # readMore = true
-displayMode = "dark"
+# displayMode = "dark"
 disableThemeSwitcher = true
 enableMediumZoom = false
 
