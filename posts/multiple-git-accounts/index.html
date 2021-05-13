@@ -1,0 +1,42 @@
+<!doctype html><html dir=ltr lang=tr data-theme><head><title>| USING MULTIPLE GIT ACCOUNTS</title><meta charset=utf-8><meta name=generator content="Hugo 0.83.1"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name=description content="Veli Ömür Turan
+"><link rel=stylesheet href=/css/main.min.bc9c6feb1dc21ca10380089a3cf98f7f0c9229eea1c73bacf720f371960f4d4c.css integrity="sha256-vJxv6x3CHKEDgAiaPPmPfwySKe6hxzus9yDzcZYPTUw=" crossorigin=anonymous type=text/css><link rel=stylesheet href=/css/markupHighlight.min.f798cbda9aaa38f89eb38be6414bd082cfd71a6780375cbf67b6d2fb2b96491e.css integrity="sha256-95jL2pqqOPies4vmQUvQgs/XGmeAN1y/Z7bS+yuWSR4=" crossorigin=anonymous type=text/css><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin=anonymous><link rel="shortcut icon" href=/favicons/favicon.ico type=image/x-icon><link rel=apple-touch-icon sizes=180x180 href=/favicons/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicons/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicons/favicon-16x16.png><link rel=canonical href=/posts/multiple-git-accounts/><script type=text/javascript src=/js/anatole-header.min.0c05c0a90d28c968a1cad4fb31abd0b8e1264e788ccefed022ae1d3b6f627514.js integrity="sha256-DAXAqQ0oyWihytT7MavQuOEmTniMzv7QIq4dO29idRQ=" crossorigin=anonymous></script><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://omurturan.com/images/site-feature-image.png"><meta name=twitter:title content="USING MULTIPLE GIT ACCOUNTS"><meta name=twitter:description content="I&rsquo;m using one computer for my work projects as well my personal projects."></head><body><div class="sidebar ."><div class=logo-title><div class=title><img src=/images/profile.jpg alt="profile picture"><h3 title><a href=/>👨‍💻🎹☕️🌻🖖</a></h3><div class=description><p>Veli Ömür Turan<br></p></div></div></div><ul class=social-links><li><a href=https://www.linkedin.com/in/omurturan/ rel=me aria-label=Linkedin><i class="fab fa-linkedin fa-2x" aria-hidden=true></i></a></li><li><a href=https://github.com/omurturan rel=me aria-label=GitHub><i class="fab fa-github fa-2x" aria-hidden=true></i></a></li><li><a href=https://instagram.com/omurturan rel=me aria-label=instagram><i class="fab fa-instagram fa-2x" aria-hidden=true></i></a></li><li><a href=https://twitter.com/omurturan rel=me aria-label=twitter><i class="fab fa-twitter fa-2x" aria-hidden=true></i></a></li><li><a href=mailto:info@omurturan.com rel=me aria-label=e-mail><i class="fas fa-envelope fa-2x" aria-hidden=true></i></a></li></ul><div class=footer><div class=by_farbox>&copy; 2021</div></div></div><div class=main><div class="page-top ."><a role=button class=navbar-burger data-target=navMenu aria-label=menu aria-expanded=false><span aria-hidden=true></span><span aria-hidden=true></span><span aria-hidden=true></span></a><ul class=nav id=navMenu><li><a href=/ title>Home</a></li><li><a href=/about/ title>About</a></li><li><a href=/contact/ title>Contact</a></li></ul></div><div class=autopagerize_page_element><div class=content><div class="post ."><div class=post-content><div class=post-title><h3>USING MULTIPLE GIT ACCOUNTS</h3></div><p>I&rsquo;m using one computer for my work projects as well my personal projects. In our company, we use Gitlab. However, I prefer to host my side projects on Github. Therefore, I needed to configure my local git setup so that it would know which account to use whenever I do <code>git push</code>.</p><p>I have different folders for personal and work related projects. Let&rsquo;s assume my directory structure looks like this:</p><div class=highlight><pre class=chroma><code class=language-fallback data-lang=fallback>Projects
+└─── personal
+│    └─── super-duper-project
+│    └─── another-cool-project
+│
+└─── work
+     └─── work-project-1
+     └─── work-project-2
+</code></pre></div><p>I want to use different Git accounts in <code>personal</code> and <code>work</code> folders. It can easily be done modifying your git configuration.</p><p>This is how my current <code>~/.gitconfig</code> looks like:</p><div class=highlight><pre class=chroma><code class=language-fallback data-lang=fallback>[user]
+	name = Ömür Turan
+	email = my-personal-email@gmail.com
+[pull]
+    rebase = true
+[includeIf &#34;gitdir:~/Projects/work/&#34;]
+    path = .gitconfig-work
+[core]
+	excludesfile = /Users/omur/.gitignore_global
+</code></pre></div><p>There is only one single trick here: <code>includeIf</code>. Here I&rsquo;m basically saying that if the directory is the one I specified, then include the external git configuration named <code>.gitconfig-work</code>.</p><p>And this is the content of this <code>~/.gitconfig-work</code> file:</p><div class=highlight><pre class=chroma><code class=language-fallback data-lang=fallback>[user]
+    name = Ömür Turan
+    email = omur@my-work-email.com
+
+</code></pre></div><p>No magic. Just dead simple configuration.</p><p>However, you probably have different SSH keys for your different Git accounts. Then, you also need to modify your SSH config. I&rsquo;m not going into details of how to create an SSH key. For this example, I&rsquo;ll just assume you already have two different SSH keys. Let&rsquo;s again assume that this is your <code>~/.ssh</code> directory with two differen SSH keys (work and personal):</p><div class=highlight><pre class=chroma><code class=language-fallback data-lang=fallback>.ssh
+│   config
+│   known_hosts
+│   work_id_ed25519
+│   work_id_ed25519.pub
+│   personal_id_ed25519
+│   personal_id_ed25519.pub
+
+</code></pre></div><p>In my use case, I wanted use <code>work_id_ed25519</code> key whenever I push to Gitlab. For everything else, I still want to use my regular <code>personal_id_ed25519</code> key. I achieved this result by modifying the <code>config</code> file. This is how my configuration looks like:</p><div class=highlight><pre class=chroma><code class=language-fallback data-lang=fallback>Host gitlab
+    HostName gitlab.com
+    User git
+    IdentityFile ~/.ssh/work_id_ed25519
+
+Host *
+    IdentitiesOnly yes
+    IdentityFile ~/.ssh/personal_id_ed25519
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+    UseKeychain yes
+</code></pre></div><p>You can probably get more creative with your ssh config but this is what I needed.</p><p>I hope this was useful. If you have any comments, please do not hesitate to reach out to me. You can find my social media handles to the left of this page.</p><p>Cheers! 🕺</p></div><div class=post-footer><div class=info></div></div></div></div></div></div></body></html>
