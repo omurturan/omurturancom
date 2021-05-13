@@ -4,7 +4,7 @@ date: 2021-04-13T20:30:36+02:00
 draft: false
 ---
 
-I'm using one computer for my work projects as well my personal projects. In our company, we use Gitlab. However, I prefer to host my side projects on Github. Therefore, I needed to configure my local git setup so that it would know which account to use whenever I do `git push`.
+I'm using one computer for my work projects as well as my personal projects. In our company, we use Gitlab. However, I prefer to host my side projects on Github. Therefore, I needed to configure my local git setup so that it would know which account to use whenever I do `git push`.
 
 I have different folders for personal and work related projects. Let's assume my directory structure looks like this:
 
