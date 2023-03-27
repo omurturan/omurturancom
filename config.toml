@@ -76,3 +76,6 @@ url = "mailto:info@omurturan.com"
   weight = 300
   identifier = "contact"
   url = "/contact/"
+
+[markup.goldmark.renderer]
+unsafe= true
