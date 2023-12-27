@@ -28,6 +28,8 @@ readMore = true
 disableThemeSwitcher = true
 enableMediumZoom = false
 
+customCss = ["css/custom.css"]
+
 ## Social links
 # use 'fab' when brand icons, use 'fas' when standard solid icons.
 [[params.socialIcons]]
