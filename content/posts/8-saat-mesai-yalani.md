@@ -1,5 +1,5 @@
 ---
-title: "8 Saat Mesai Bir Yalan mı?"
+title: "8 SAAT MESAİ BİR YALAN MI?"
 date: 2020-11-13T23:12:04+02:00
 draft: false
 ---

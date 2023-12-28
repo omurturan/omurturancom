@@ -1,5 +1,5 @@
 ---
-title: "Yazılım Sektöründe İş ve Özel Hayat Dengesi"
+title: "YAZILIM SEKTÖRÜNDE İŞ VE ÖZEL HAYAT DENGESİ"
 date: 2021-09-27T15:00:04+02:00
 draft: false
 ---

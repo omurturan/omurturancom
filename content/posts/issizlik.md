@@ -1,5 +1,5 @@
 ---
-title: "İşsizlikten İşlere Vakit Bulamamak"
+title: "İŞSİZLİKTEN İŞLERE VAKİT BULAMAMAK"
 date: 2017-10-26T00:30:02+01:00
 draft: false
 ---

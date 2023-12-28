@@ -1,5 +1,5 @@
 ---
-title: "Yeni Başlayanlar İçin Öz Geçmiş Hazırlama Rehberi"
+title: "YENİ BAŞLAYANLAR İÇİN ÖZ GEÇMİŞ HAZIRLAMA REHBERİ"
 date: 2016-07-17T00:57:06+01:00
 draft: false
 ---

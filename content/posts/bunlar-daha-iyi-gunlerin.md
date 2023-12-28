@@ -1,5 +1,5 @@
 ---
-title: "Bunlar Daha Iyi Günlerin"
+title: "BUNLAR DAHA İYİ GÜNLERİN"
 date: 2023-12-27T23:08:40+01:00
 draft: false
 ---

@@ -1,5 +1,5 @@
 ---
-title: "Engineering Manager serüvenim"
+title: "Engineering Manager SERÜVENİM"
 date: 2023-03-19T16:00:22+01:00
 draft: false
 ---
